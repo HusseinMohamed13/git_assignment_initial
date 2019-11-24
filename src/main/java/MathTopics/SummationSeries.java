@@ -6,12 +6,19 @@ import git_assignment_initial.ITopic;
 
 public class SummationSeries implements ITopic {
 	public static long GetSum(int n) {
-		return 55;
+		int result=0;
+		for(int i=0;i<=n;i++)
+		{
+			result=result+i;
+		}
+		return result;
 	}
 
 	@Override
 	public String NotifyTopic(int input) {
 
-		return "Input = 10\nSum = " + 55;
+		long x= GetSum(input);
+		String output = PrintStyle.print(input, "summation series") + x;
+		return output;
 	}
 }
