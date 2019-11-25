@@ -18,7 +18,7 @@ public class SummationSeries implements ITopic {
 	public String NotifyTopic(int input) {
 
 		long x= GetSum(input);
-		String output = PrintStyle.print(input, "Sum") + x;
+		String output = PrintStyle.print(input, "Sum ") + x;
 		return output;
 	}
 }
