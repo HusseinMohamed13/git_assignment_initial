@@ -2,9 +2,15 @@ package MathTopics;
 
 import git_assignment_initial.ITopic;
 import git_assignment_initial.PrintStyle;
+import git_assignment_initial.Topic;
+
+//Please read CicleArea.java Code and implement as a clone of it but using your formula
 
 public class LucasSeries implements ITopic {
-
+	private int input;
+    public LucasSeries(){
+    	this.input=0;
+    }
 	public static long GetLucas(int n) {
 		if (n == 0)
 			return 2;
@@ -16,9 +22,10 @@ public class LucasSeries implements ITopic {
 	}
 
 	@Override
-	public String NotifyTopic(int input) {
-		long ans = GetLucas(input);
-		String output = PrintStyle.print(input, "Lucas") + ans;
+	public String NotifyTopic(Topic topic) {
+        this.input=topic.getInput();
+        long ans = GetLucas(this.input);
+		String output = PrintStyle.print(this.input, "Lucas") + ans;
 		return output;
 	}
 }
