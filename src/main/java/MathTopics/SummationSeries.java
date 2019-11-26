@@ -1,6 +1,7 @@
 package MathTopics;
 
 import git_assignment_initial.ITopic;
+mport git_assignment_initial.PrintStyle;
 
 //Please read CicleArea.java Code and implement as a clone of it but using your formula
 
@@ -18,7 +19,7 @@ public class SummationSeries implements ITopic {
 	public String NotifyTopic(int input) {
 
 		long x= GetSum(input);
-		String output = PrintStyle.print(input, "Sum ") + x;
+		String output = PrintStyle.print(input, "Sum") + x;
 		return output;
 	}
 }
